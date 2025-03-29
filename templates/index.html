@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Modelo de Oficio</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Modelo de Oficio</h1>
+        <form action="/modify" method="post">
+            {% for text in highlighted_text %}
+                <label>{{ text }}</label>
+                <input type="text" name="{{ text }}" value="{{ text }}">
+            {% endfor %}
+            <button type="submit">Generar y Descargar Oficio</button>
+        </form>
+    </div>
+</body>
+</html>
